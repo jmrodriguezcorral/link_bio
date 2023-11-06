@@ -22,6 +22,15 @@ def links() -> rx.Component:
             "Discord",
             "Para la comunidad",
             "https://youtube.com/@mouredev"),
+        title("Contacto"),
+        link_button(
+            "MyPublicInbox",
+            "Respuesta rápida y con preferencia", 
+            "https://mypublicinbox.com/mouredev"),
+        link_button(
+            "Email",
+            "jmchema@gmail.com",
+            f"mailto:jmchema@gmail.com"),
         width="100%",
         spacing=Size.MEDIUM.value
     )

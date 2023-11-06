@@ -3,16 +3,25 @@ from link_bio.components.link_icon import link_icon
 from link_bio.components.info_text import info_text
 from link_bio.styles.styles import Size as Size
 from link_bio.styles.colors import TextColor as TextColor
+from link_bio.styles.colors import Color as Color
 
 def header() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.avatar(name="Brais Moure", size="xl"),
+            rx.avatar(
+                name="Brais Moure", 
+                size="xl",
+                src = "avatar.jpg",
+                color= TextColor.BODY.value,
+                bg = Color.CONTENT.value,
+                padding="2px",
+                border="4px",
+                border_color=Color.PRIMARY.value
+            ),
             rx.vstack(
                 rx.heading(
-                    "José Mª Rodriguez", 
-                    size="lg",
-                    color = TextColor.HEADER.value
+                    "José Mª Rodriguez",
+                    size = "lg"
                 ),
                 rx.text(
                     "@jmchema", 
@@ -45,6 +54,7 @@ def header() -> rx.Component:
             Además creo contenido formativo sobre programación y tecnología en redes. 
             Aquí podrás encontrar todos mis enlaces de interés. ¡Bienvenid@!
             """,
+            font_size = Size.DEFAULT.value,
             color=TextColor.BODY.value),
         spacing = Size.BIG.value,
         align_items = "start"

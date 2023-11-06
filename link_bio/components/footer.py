@@ -5,7 +5,10 @@ from link_bio.styles.colors import TextColor as TextColor
 
 def footer() -> rx.Component:
     return rx.vstack(
-        rx.image(src = "favicon.ico"),
+        rx.image(
+            src = "logo.png",
+            height = Size.VERY_BIG.value
+        ),
         rx.link(
             f"© 2014-{datetime.date.today().year} MoureDev by Brais Moure v3.",
             href="https://mouredex.com",
