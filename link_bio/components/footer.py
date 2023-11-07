@@ -1,5 +1,6 @@
 import reflex as rx
 import datetime
+import link_bio.constants as const
 from link_bio.styles.styles import Size as Size
 from link_bio.styles.colors import TextColor as TextColor
 
@@ -11,9 +12,9 @@ def footer() -> rx.Component:
         ),
         rx.link(
             f"© 2014-{datetime.date.today().year} MoureDev by Brais Moure v3.",
-            href="https://mouredex.com",
-            is_external=True,
-            font_size= Size.MEDIUM.value
+            href = const.MOUREDEV_URL,
+            is_external = True,
+            font_size = Size.MEDIUM.value
             ),
         rx.text(
             "BUILDING SOFTWARE WITH ♥ FROM GALICIA TO THE WORLD.",

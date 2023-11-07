@@ -1,7 +1,7 @@
 import reflex as rx
 import link_bio.styles.styles as styles
 
-def link_button(text: str, body :str ,url: str, image: str) -> rx.Component:
+def link_button(text: str, body :str , image: str, url: str) -> rx.Component:
     return rx.link(
         # rx.button(text, width="100%"),  <-- Lo dejo de una version anterior
         rx.button(

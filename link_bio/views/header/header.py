@@ -4,6 +4,8 @@ from link_bio.components.info_text import info_text
 from link_bio.styles.styles import Size as Size
 from link_bio.styles.colors import TextColor as TextColor
 from link_bio.styles.colors import Color as Color
+import link_bio.constants as const
+import datetime
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -29,10 +31,31 @@ def header() -> rx.Component:
                     color = TextColor.BODY.value
                 ),
                 rx.hstack(
-                    link_icon("icons/twitch.svg","https://x.com/jmchema"),
-                    link_icon("icons/twitch.svg","https://x.com/jmchema"),
-                    link_icon("icons/twitch.svg","https://x.com/jmchema"),
-                    spacing = Size.DEFAULT.value
+                    link_icon(
+                        "icons/github.svg",
+                        const.GITHUB_URL
+                    ),
+                    link_icon(
+                        "icons/x.svg",
+                        const.TWITTER_X_URL
+                    ),
+                    link_icon(
+                        "icons/instagram.svg",
+                        const.INSTAGRAM_URL
+                    ),
+                    link_icon(
+                        "icons/tiktok.svg",
+                        const.TIKTOK_URL
+                    ),
+                    link_icon(
+                        "icons/spotify.svg",
+                        const.SPOTIFY_URL
+                    ),
+                    link_icon(
+                        "icons/linkedin.svg",
+                        const.LINKEDIN_URL
+                    ),
+                    spacing=Size.LARGE.value
                 ),
                 align_items="start"
             ),
@@ -40,11 +63,18 @@ def header() -> rx.Component:
         ),
 
         rx.flex(
-            info_text("+13", "Años de experiencia"),
+            info_text(
+                f"{experience()}+",
+                "años de experiencia"
+            ),
             rx.spacer(),
-            info_text("+13", "Años de experiencia"),
+            info_text(
+                "100+", "aplicaciones creadas"
+            ),
             rx.spacer(),
-            info_text("+13", "Años de experiencia"),
+            info_text(
+                "1M+", "seguidores"
+            ),
             width="100%"
         ),
 
@@ -61,3 +91,7 @@ def header() -> rx.Component:
         align_items = "start"
 
     )
+
+
+def experience() -> int:
+    return datetime.date.today().year - 2010
