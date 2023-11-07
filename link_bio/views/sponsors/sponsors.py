@@ -15,7 +15,7 @@ def sponsors() -> rx.Component:
                 image="mvp.png",
                 url="http://www.mvp.es"
             ),
-            spacing = Size.DEFAULT.value
+            spacing = Size.BIG.value
         ),
         width="100%",
         align_items="start",

@@ -29,9 +29,10 @@ def header() -> rx.Component:
                     color = TextColor.BODY.value
                 ),
                 rx.hstack(
-                    link_icon("https://x.com/jmchema"),
-                    link_icon("https://x.com/jmchema"),
-                    link_icon("https://x.com/jmchema")
+                    link_icon("icons/twitch.svg","https://x.com/jmchema"),
+                    link_icon("icons/twitch.svg","https://x.com/jmchema"),
+                    link_icon("icons/twitch.svg","https://x.com/jmchema"),
+                    spacing = Size.DEFAULT.value
                 ),
                 align_items="start"
             ),
