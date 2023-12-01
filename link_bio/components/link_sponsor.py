@@ -7,6 +7,7 @@ def link_sponsor(image: str, url : str) -> rx.Component:
         rx.image(
             src=image,
             html_height=Size.VERY_BIG.value,  #cmbiado por mi. moure lo pone sin html_
+            width="auto"
         ),
         href=url,
         is_external=True
